@@ -18,7 +18,7 @@ spec:
         run: apache
     spec:
       containers:
-      - image: devlite/microservice-kubernetes-demo-apache:28
+      - image: docker.io/devlite/microservice-kubernetes-demo-apache:28
         name: apache
         ports:
         - containerPort: 80
