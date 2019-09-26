@@ -2,7 +2,6 @@
 if [ -z "$DOCKER_ACCOUNT" ]; then
     DOCKER_ACCOUNT=bash16an
 fi;
-docker login -u basha16ann --password-stdin basha.505
 docker build --tag=microservice-kubernetes-demo-apache apache
 docker tag microservice-kubernetes-demo-apache $DOCKER_ACCOUNT/microservice-kubernetes-demo-apache:latest
 docker push $DOCKER_ACCOUNT/microservice-kubernetes-demo-apache
