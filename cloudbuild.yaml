@@ -4,7 +4,8 @@ steps:
         #  args: ['git', 'clone','${_GIT_HUB_URL}','${_GIT_BRANCH_NAME}']
         #- name: 'registry.hub.docker.com/devlite/buildserver:2.0'
         #  args: ['/usr/share/maven/bin/mvn', 'clean package']
-  - name: 'gcr.io/cloud-builders/mvn'
+        #  - name: 'gcr.io/cloud-builders/mvn'
+  - name: 'gcr.io/cloud-builders/mvn@sha256:721d32b68f4d0a97220ef7cdf19f6ba3a3e35aa9306710af9a893365e47f43bd'
     args: ['package']
     dir:  'microservice-kubernetes-demo'
   - name: 'gcr.io/cloud-builders/mvn'
