@@ -5,7 +5,7 @@ steps:
         #- name: 'registry.hub.docker.com/devlite/buildserver:2.0'
         #  args: ['/usr/share/maven/bin/mvn', 'clean package']
   - name: 'gcr.io/cloud-builders/mvn'
-    args: ['clean package']
+    args: ['package']
     dir:  'microservice-kubernetes-demo'
   - name: 'gcr.io/cloud-builders/mvn'
     args: ['sonar:sonar','-Dsonar.host.url=http://3.209.53.193:9000']
