@@ -37,3 +37,10 @@ steps:
     dir:  'microservice-kubernetes-demo/microservice-kubernetes-demo-customer'
     args: ['push', 'gcr.io/bldc-integration-with-gcp/microservice-kubernetes-demo-customer']
 
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args:
+    - run
+    - --filename=deployment.yaml
+    - --location=us-central1-a
+    - --cluster=devopsteamcluster
+
