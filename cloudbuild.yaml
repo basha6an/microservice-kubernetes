@@ -8,7 +8,7 @@ steps:
   - name: 'gcr.io/cloud-builders/mvn@sha256:721d32b68f4d0a97220ef7cdf19f6ba3a3e35aa9306710af9a893365e47f43bd'
     args: ['package']
     dir:  'microservice-kubernetes-demo'
-  - name: 'gcr.io/cloud-builders/mvn'
+  - name: 'gcr.io/cloud-builders/mvn@sha256:32890b64c3dc5eead82a871aa92c990c952d1f165998681c10fdc3f617050c35'
     args: ['sonar:sonar','-Dsonar.host.url=http://3.209.53.193:9000']
     dir:  'microservice-kubernetes-demo'
   - name: 'gcr.io/cloud-builders/docker'
